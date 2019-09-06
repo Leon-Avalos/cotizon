@@ -10,10 +10,12 @@
     <!-- Boostrap-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+
     <title>Cotizamelo</title>
 </head>
 
-<body>
+<body class="body">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a href="#" class="navbar-brand color-black h-50">
             <img src="./static/car.png" alt="Cotizamelo">
@@ -48,7 +50,6 @@
         </div>
     </div>
 
-
     <!-- Boostrap Js y dependencias -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -62,7 +63,7 @@
 </body>
 
 <!-- Footer -->
-<footer class="page-footer bg-dark text-white font-small blue pt-4">
+<footer class="footer bg-dark text-white font-small blue pt-4">
 
     <!-- Footer Links -->
     <div class="container-fluid text-center text-md-left">
@@ -71,10 +72,26 @@
         <div class="row">
 
             <!-- Grid column -->
-            <div class="col-md-6 mt-md-0 mt-1">
+            <div class="col-md-6 mt-md-0 mt-1 ">
 
                 <!-- Content -->
                 <h5 class="text-uppercase">Cotízamelo S.A</h5>
+                <form class="w-75">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <input type="text" class="form-control" id="nombreContacto" placeholder="Nombre">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <input type="email" class="form-control" id="correoContacto" placeholder="Correo">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="mensajeContacto" placeholder="Mensaje">
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" id="btnContacto" class="btn btn-primary" onclick="registrarMensaje()">Cotízanos</button>
+                    </div>
+                </form>
 
             </div>
             <!-- Grid column -->
@@ -120,7 +137,7 @@
                     </li>
                     <li>
                         <a href="#!">Trabaja con Nosotros</a>
-                    </li>                    
+                    </li>
                 </ul>
 
             </div>
@@ -136,7 +153,9 @@
     <div class="footer-copyright text-md-center py-3">© 2019 León Ávalos - Gabriel Bateca.
     </div>
     <!-- Copyright -->
-    
+
+    <script src="mensaje.js"></script>
+
 </footer>
 <!-- Footer -->
 

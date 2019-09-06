@@ -1,7 +1,10 @@
 .footer{
-    position: absolute;
+    position: initial;
     bottom: 0;
     width: 100%;
+}
+.list-unstyled{
+    position: sticky;
 }
 
 .body, .jumbotron{
@@ -26,8 +29,8 @@
     border-radius: 50px;
 }
 
-/*INICIO DE CONFIGURACION DEL ESTILO DE LA VENTANA DE SIGN IN*/
-.overlay{/*es la pantalla en general del popup y mas a fondo oscuro cuando aparece la ventana*/
+/*INICIO DE CONFIGURACION DEL ESTILO DE LA VENTANA DE SIGN-IN*/
+.overlay{/*es la pantalla en general del popup y oscurece el fondo cuando aparece la ventana*/
     background: rgba(0, 0, 0, .4);
     position: fixed;/*que el popup no se mueva*/
     top: 0;
@@ -143,3 +146,123 @@
         opacity: 1;
     }
 }
+/*FIN CONFIGURACION DE ESTILOS DE VENTANA SIGN-IN*/
+
+
+/*INICIO DE CONFIGURACION DE ESTILO DE LA VENTANA SIGN-UP*/
+.overlay-sign-up{/*es la pantalla en general del popup y oscurece el fondo cuando aparece la ventana*/
+    background: rgba(0, 0, 0, .4);
+    position: absolute;/*que el popup no se mueva*/
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden; /* que no esté visible inicialmente*/
+}
+.overlay-sign-up.active{
+    visibility: visible;
+}
+.popup-sign-up{
+    background: #f8f8f8;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, .3);
+    border-radius: 3px;
+    position: fixed;
+    font-family: 'Montserrat', sans-serif;/*tipo de fuente*/
+    padding: 20px;
+    text-align: center;
+    width: 700px;
+    color: black;
+    transition: .3s ease all;
+    transform: scale(0.7);
+    opacity: 0; /*volvemos el popup invisible jua jua jua*/
+}
+.popup-sign-up .btn-cerrar-popup-sign-up{
+    font-size: 16px;
+    line-height: 16px;
+    display: block;
+    text-align: right;
+    color: #888888;
+    transition: .3s ease all; /*permite asignarle tiempo a la transicion*/
+}
+.popup-sign-up .btn-cerrar-popup-sign-up:hover{
+    color:black;
+}
+.popup-sign-up h3{/*caracteristicas del titulo del popup*/
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    opacity: 0;
+}
+.popup-sign-up h4{/*caracteristicas del subtitulo del popup*/
+    font-size: 26px;
+    font-weight: 300;
+    margin-bottom: 40px;
+    opacity: 0;
+}
+.popup-sign-up form .contenedor-inputs-sign-up{/*opasidad del contenedor de los inputs*/
+    opacity: 0;
+}
+.popup-sign-up form .contenedor-inputs-sign-up input{/*le damos preferencias a los inputs*/
+    width: 300px;
+    margin-bottom: 28px;
+    height: 37px;
+    line-height: 52px;
+    font-size: 18px;
+    text-align: center;
+    border: 1px solid #888888;
+}
+.popup-sign-up form .btn-submit-sign-up{/*le damos caracteristicas a el botón submit*/
+    padding: 0 20px;
+    height: 40px;
+    line-height: 40px;
+    border: none;
+    color: #fff;
+    background: #41b436;
+    border-radius: 3px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    transition: .3s ease all;
+}
+.popup-sign-up form .btn-submit-sign-up:hover{/*hacemos que el botón submit cambie de color al posicionar el cursor sobre este*/
+    background: #79e76f;
+}
+.popup-sign-up.active{/*preferencias del popup cuando se encuentra en modo activo*/
+    opacity: 1;
+    transform: scale(1);
+}
+.popup-sign-up.active h3{animation: entradaTitulo-sign-up .8s ease .5s forwards;}
+.popup-sign-up.active h4{animation: entradaSubtitulo-sign-up .8s ease .5s forwards;}
+.popup-sign-up.active .contenedor-inputs-sign-up{animation: entradaInputs-sign-up 1s ease 1s forwards;}
+@keyframes entradaTitulo-sign-up {/*"efecto de entrada de el titulo"*/
+    from{
+        transform: translateY(-25px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes entradaSubtitulo-sign-up {/*"efecto de la entrada del subtitulo"*/
+    from{
+        transform: translateY(25px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes entradaInputs-sign-up {/*"efecto" de la entrada de los inputs*/
+    form{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+/*FINAL DE LA CONFIGURACION DE ESTILOS DE VENTANA DE SIGN-UP*/

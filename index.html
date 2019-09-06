@@ -59,8 +59,37 @@
           </form>
         </div>
     </div>
-    <!--FIN DE OVERLAY Y POPUP-->
+    <!--FIN DE OVERLAY Y POPUP VENTANA SIGN IN-->
+    <!--CREAR EL OVERLAY Y EL POPUP PARA LA VENTANA DE SING UP-->
+    <div class="overlay-sign-up" id="overlay-sign-up">
+        <div class="popup-sign-up" id="popup-sign-up">
+          <a href="#" id="btn-cerrar-popup-sign-up" class="btn-cerrar-popup-sign-up"><i class="fas fa-times"></i></a>
+          <h3>REGISTRATE</h3>
+          <h5>Los campos marcados con * son obligatorios.</h5>
+          <form action="">
+            <div class="contenedor-inputs-sign-up">
+              <dfn>Ingrese su nombre <dfn style="color: red">*</dfn></dfn>
+              <input type="text" placeholder="Nombre"><br>
+              <dfn>Ingrese su direccion de correo <dfn style="color: red">*</dfn></dfn>
+              <input type="email" placeholder="ejemplo@ejemplo.com"><br>
+              <dfn>Ingrese una contraseña <dfn style="color: red">*</dfn></dfn>
+              <input type="password" placeholder="Contraseña" id="password"><br>
+              <dfn>Ingrese nuevamente la contraseña <dfn style="color: red">*</dfn></dfn>
+              <input type="password" placeholder="Contraseña" id="confirmacion-password"><br>
+              <dfn>Ingrese su fecha de nacimiento <dfn style="color: red">*</dfn></dfn>
+              <input type="date" id="fecha-nacimiento">
+              <br>
+              
+            </div>
+            <input type="checkbox">Acepta nuestros <a href="#">Términos de servicio</a> <br> y <a href="#">Declaración de privacidad.</a> </input><br>
+            <input type="submit" class="btn-submit-sign-up" value="Crear cuenta">
+          </form>
+        </div>
+    </div>
+
+    <!--FIN DE OVERLAY Y POPUP VENTANA SIGN UP-->
     <script src="popup.js"></script><!--conexion con el arhivo javascript-->
+
     <div class="jumbotron">
         <h1 class="display-4 text-center">Bienvenido a Don Cotizon</h1>
         <p class="lead text-center">Agiliza el repetitivo proceso de cotización de sitios web.</p>
@@ -127,7 +156,7 @@
 
                 <ul class="list-unstyled">
                     <li>
-                        <i class="fa fa-facebook" style="color:whitesmoke"></i><a href="#!"> Facebook</a>
+                        <i class="fa fa-facebook" style="color:whitesmoke" ></i><a href="#!"> Facebook</a>
                     </li>
                     <li>
                         <i class="fa fa-instagram" style="color:whitesmoke"></i><a href="#!"> Instagram</a>

@@ -14,9 +14,9 @@ function registrarUsuario() {
                 password: clave
             };
 
-            localStorage.setItem(usuario.name, JSON.stringify(usuario));
+            localStorage.setItem(usuario.correo, JSON.stringify(usuario));
             alert('Ha sido registrado exitosamente.')
-            console.log('retrievedObject: ', JSON.parse(localStorage.getItem(usuario.name)));
+            console.log('retrievedObject: ', JSON.parse(localStorage.getItem(usuario.correo)));
             limpiarCampos();
         }        
     } else {

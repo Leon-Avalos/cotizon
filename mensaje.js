@@ -22,7 +22,7 @@ function registrarMensaje() {
 
 }
 
-function limpiarCamposContacto(){
+function limpiarCamposContacto() {
     document.getElementById('nombreContacto').value = '';
     document.getElementById('correoContacto').value = '';
     document.getElementById('mensajeContacto').value = '';

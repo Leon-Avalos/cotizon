@@ -36,7 +36,7 @@
                     <a href="#" class="nav-link">Sobre nosotros <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item active">
-                    <a href="#" class="nav-link" id="sign-in">iniciar sesión<span class="sr-only">(current)</span></a>
+                    <a href="#" class="nav-link" id="sign-in">Iniciar sesión<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item active">
                     <a href="#" class="nav-link" id="sign-up">Únete</a>
@@ -55,11 +55,12 @@
               <input type="email" placeholder="ejemplo@ejemplo.com">
               <input type="password" placeholder="Contraseña">
             </div>
-            <input type="submit" class="btn-submit" value="ingresar">
+            <input type="submit" id="btnInicio" class="btn-submit" onclick="" value="ingresar">
           </form>
         </div>
-    </div>
+    </div>    
     <!--FIN DE OVERLAY Y POPUP VENTANA SIGN IN-->
+
     <!--CREAR EL OVERLAY Y EL POPUP PARA LA VENTANA DE SING UP-->
     <div class="overlay-sign-up" id="overlay-sign-up">
         <div class="popup-sign-up" id="popup-sign-up">
@@ -69,34 +70,31 @@
           <form action="">
             <div class="contenedor-inputs-sign-up">
               <dfn>Ingrese su nombre <dfn style="color: red">*</dfn></dfn>
-              <input type="text" placeholder="Nombre"><br>
+              <input type="text" id="regNombre" placeholder="Nombre"><br>
               <dfn>Ingrese su direccion de correo <dfn style="color: red">*</dfn></dfn>
-              <input type="email" placeholder="ejemplo@ejemplo.com"><br>
+              <input type="email" id="regCorreo" placeholder="ejemplo@ejemplo.com"><br>
               <dfn>Ingrese una contraseña <dfn style="color: red">*</dfn></dfn>
-              <input type="password" placeholder="Contraseña" id="password"><br>
+              <input type="password" id="regPass" placeholder="Contraseña" id="password"><br>
               <dfn>Ingrese nuevamente la contraseña <dfn style="color: red">*</dfn></dfn>
-              <input type="password" placeholder="Contraseña" id="confirmacion-password"><br>
-              <dfn>Ingrese su fecha de nacimiento <dfn style="color: red">*</dfn></dfn>
-              <input type="date" id="fecha-nacimiento">
-              <br>
-              
+              <input type="password" id="regPass2" placeholder="Contraseña" id="confirmacion-password"><br>              
+              <br>              
             </div>
-            <input type="checkbox">Acepta nuestros <a href="#">Términos de servicio</a> <br> y <a href="#">Declaración de privacidad.</a> </input><br>
-            <input type="submit" class="btn-submit-sign-up" value="Crear cuenta">
+            <input type="checkbox" id="regTerms">Acepta nuestros <a href="#">Términos de servicio</a> <br> y <a href="#">Declaración de privacidad.</a> </input><br>
+            <input type="button" onclick="registrarUsuario()" class="btn-submit-sign-up" value="Crear cuenta">
           </form>
         </div>
     </div>
 
     <!--FIN DE OVERLAY Y POPUP VENTANA SIGN UP-->
     <script src="popup.js"></script><!--conexion con el arhivo javascript-->
-
+    <script src="registrar.js"></script>
     <div class="jumbotron">
         <h1 class="display-4 text-center">Bienvenido a Don Cotizon</h1>
         <p class="lead text-center">Agiliza el repetitivo proceso de cotización de sitios web.</p>
         <hr class="my-4">
         <p class="text-center">Te invitamos a probar nuestra demo para cotización de sitios web.</p>
         <div class="text-center">
-            <a href="#" class="btn btn-success btn-lg" role="button">Cotizemos</a>
+            <a href="#" class="btn btn-success btn-lg" role="button">Coticemos</a>
         </div>
     </div>
 
@@ -159,7 +157,7 @@
                         <i class="fa fa-facebook" style="color:whitesmoke" ></i><a href="#!"> Facebook</a>
                     </li>
                     <li>
-                        <i class="fa fa-instagram" style="color:whitesmoke"></i><a href="#!"> Instagram</a>
+                        <i class="fa fa-instagram" style="color:whitesmoke"></i><a href="https://www.instagram.com/gabrielbateca/"> Instagram</a>
                     </li>
                     <li>
                         <i class="fa fa-twitter" style="color:whitesmoke"></i><a href="#!"> Twitter</a>

@@ -1,17 +1,21 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel='icon' href="./landing/static/car.png" type='image/x-icon'>
+    <link rel='icon' href="./static/car.png" type='image/x-icon'>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- Boostrap-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="index.css">
+<<<<<<< HEAD
+    
 
+=======
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="index.css">
+>>>>>>> refs/remotes/origin/master
     <title>Cotizamelo</title>
 </head>
 
@@ -36,10 +40,32 @@
                 <li class="nav-item active">
                     <a href="#" class="nav-link">Sobre nosotros <span class="sr-only">(current)</span></a>
                 </li>
+                <li class="nav-item active">
+                    <a href="#" class="nav-link" id="sign-in">iniciar sesión<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a href="#" class="nav-link" id="sign-up">únete</a>
+                </li> 
             </ul>
-        </div>
+        </div>    
     </nav>
-
+    <!--CREAR EL OVERLAY Y EL POPUP PARA LA VENTANA DE SING IN-->
+    <div class="overlay" id="overlay">
+        <div class="popup" id="popup">
+          <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
+          <h3>INICIA SESIÓN</h3>
+          <h4>Ingresa tu dirección de correo electrónico y tu contraseña.</h4>
+          <form action="">
+            <div class="contenedor-inputs">
+              <input type="email" placeholder="ejemplo@ejemplo.com">
+              <input type="password" placeholder="Contraseña">
+            </div>
+            <input type="submit" class="btn-submit" value="ingresar">
+          </form>
+        </div>
+    </div>
+    <!--FIN DE OVERLAY Y POPUP-->
+    <script src="popup.js"></script><!--conexion con el arhivo javascript-->
     <div class="jumbotron">
         <h1 class="display-4 text-center">Bienvenido a Don Cotizon</h1>
         <p class="lead text-center">Agiliza el repetitivo proceso de cotización de sitios web.</p>
@@ -106,16 +132,16 @@
 
                 <ul class="list-unstyled">
                     <li>
-                        <a href="#!">Facebook</a>
+                        <i class="fa fa-facebook" style="color:whitesmoke"></i><a href="#!"> Facebook</a>
                     </li>
                     <li>
-                        <a href="#!">Instagram</a>
+                        <i class="fa fa-instagram" style="color:whitesmoke"></i><a href="#!"> Instagram</a>
                     </li>
                     <li>
-                        <a href="#!">Twitter</a>
+                        <i class="fa fa-twitter" style="color:whitesmoke"></i><a href="#!"> Twitter</a>
                     </li>
                     <li>
-                        <a href="#!">Whatsapp</a>
+                        <i class="fa fa-whatsapp" style="color:whitesmoke"></i><a href="#!"> Whatsapp</a>
                     </li>
                 </ul>
 
@@ -154,8 +180,11 @@
     </div>
     <!-- Copyright -->
 
+<<<<<<< HEAD
     <script src="mensaje.js"></script>
 
+=======
+>>>>>>> refs/remotes/origin/master
 </footer>
 <!-- Footer -->
 

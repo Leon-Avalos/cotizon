@@ -40,25 +40,25 @@
                 </li>
                 <li class="nav-item active">
                     <a href="#" class="nav-link" id="sign-up">Únete</a>
-                </li> 
+                </li>
             </ul>
-        </div>    
+        </div>
     </nav>
     <!--CREAR EL OVERLAY Y EL POPUP PARA LA VENTANA DE SING IN-->
     <div class="overlay" id="overlay">
         <div class="popup" id="popup">
-          <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
-          <h3>INICIA SESIÓN</h3>
-          <h4>Ingresa tu dirección de correo electrónico y tu contraseña.</h4>
-          <form action="">
-            <div class="contenedor-inputs">
-              <input type="email" id="loginCorreo" placeholder="ejemplo@ejemplo.com">
-              <input type="password" id="loginClave" placeholder="Contraseña">
-            </div>
-            <input type="submit" onclick="login()" id="btnInicio" class="btn-submit" onclick="" value="ingresar">
-          </form>
+            <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
+            <h3>INICIA SESIÓN</h3>
+            <h4>Ingresa tu dirección de correo electrónico y tu contraseña.</h4>
+            <form action="">
+                <div class="contenedor-inputs">
+                    <input type="email" id="loginCorreo" placeholder="ejemplo@ejemplo.com">
+                    <input type="password" id="loginClave" placeholder="Contraseña">
+                </div>
+                <input type="submit" onclick="login()" id="btnInicio" class="btn-submit" onclick="" value="ingresar">
+            </form>
         </div>
-    </div>    
+    </div>
     <!--FIN DE OVERLAY Y POPUP VENTANA SIGN IN-->
 
     <script src="login.js"></script>
@@ -66,33 +66,37 @@
     <!--CREAR EL OVERLAY Y EL POPUP PARA LA VENTANA DE SING UP-->
     <div class="overlay-sign-up" id="overlay-sign-up">
         <div class="popup-sign-up" id="popup-sign-up">
-          <a href="#" id="btn-cerrar-popup-sign-up" class="btn-cerrar-popup-sign-up"><i class="fas fa-times"></i></a>
-          <h3>REGISTRATE</h3>
-          <h5>Los campos marcados con * son obligatorios.</h5>
-          <form action="">
-            <div class="contenedor-inputs-sign-up">
-              <dfn>Ingrese su nombre <dfn style="color: red">*</dfn></dfn>
-              <input type="text" id="regNombre" placeholder="Nombre"><br>
-              <dfn>Ingrese su direccion de correo <dfn style="color: red">*</dfn></dfn>
-              <input type="email" id="regCorreo" placeholder="ejemplo@ejemplo.com"><br>
-              <dfn>Ingrese una contraseña <dfn style="color: red">*</dfn></dfn>
-              <input type="password" id="regPass" placeholder="Contraseña" id="password"><br>
-              <dfn>Ingrese nuevamente la contraseña <dfn style="color: red">*</dfn></dfn>
-              <input type="password" id="regPass2" placeholder="Contraseña" id="confirmacion-password"><br>              
-              <br>              
-            </div>
-            <input type="checkbox" id="regTerms">Acepta nuestros <a href="#">Términos de servicio</a> <br> y <a href="#">Declaración de privacidad.</a> </input><br>
-            <input type="button" onclick="registrarUsuario()" class="btn-submit-sign-up" value="Crear cuenta">
-          </form>
+            <a href="#" id="btn-cerrar-popup-sign-up" class="btn-cerrar-popup-sign-up"><i class="fas fa-times"></i></a>
+            <h3>REGISTRATE</h3>
+            <h5>Los campos marcados con * son obligatorios.</h5>
+            <form action="">
+                <div class="contenedor-inputs-sign-up">
+                    <dfn>Ingrese su nombre <dfn style="color: red">*</dfn></dfn>
+                    <input type="text" id="regNombre" placeholder="Nombre"><br>
+                    <dfn>Ingrese su direccion de correo <dfn style="color: red">*</dfn></dfn>
+                    <input type="email" id="regCorreo" placeholder="ejemplo@ejemplo.com"><br>
+                    <dfn>Ingrese una contraseña <dfn style="color: red">*</dfn></dfn>
+                    <input type="password" id="regPass" placeholder="Contraseña" id="password"><br>
+                    <dfn>Ingrese nuevamente la contraseña <dfn style="color: red">*</dfn></dfn>
+                    <input type="password" id="regPass2" placeholder="Contraseña" id="confirmacion-password"><br>
+                    <br>
+                </div>
+                <input type="checkbox" id="regTerms">Acepta nuestros <a href="#">Términos de servicio</a> <br> y <a
+                    href="#">Declaración de privacidad.</a> </input><br>
+                <input type="button" onclick="registrarUsuario()" class="btn-submit-sign-up" value="Crear cuenta">
+            </form>
         </div>
     </div>
 
     <!--FIN DE OVERLAY Y POPUP VENTANA SIGN UP-->
-    <script src="popup.js"></script><!--conexion con el arhivo javascript-->
+    <script src="popup.js"></script>
+    <!--conexion con el arhivo javascript-->
     <script src="registrar.js"></script>
     <div class="jumbotron">
         <h1 class="display-4 text-center">Bienvenido a Don Cotizon</h1>
-        <p class="lead text-center">Agiliza el repetitivo proceso de cotización de sitios web.</p>
+        <p class="lead text-center">Don cotizon es una plataforma web que facilita a las empresas exponer
+         la cotizacion de sus
+            servicios de una manera amigable para sus potenciales clientes. Ahorrando tiempo y automatizando procesos repetitivos.</p>
         <hr class="my-4">
         <p class="text-center">Te invitamos a probar nuestra demo para cotización de sitios web.</p>
         <div class="text-center">
@@ -139,7 +143,8 @@
                         <input type="text" class="form-control" id="mensajeContacto" placeholder="Mensaje">
                     </div>
                     <div class="form-group">
-                        <button type="submit" id="btnContacto" class="btn btn-primary" onclick="registrarMensaje()">Cotízanos</button>
+                        <button type="submit" id="btnContacto" class="btn btn-primary"
+                            onclick="registrarMensaje()">Cotízanos</button>
                     </div>
                 </form>
 
@@ -156,10 +161,11 @@
 
                 <ul class="list-unstyled">
                     <li>
-                        <i class="fa fa-facebook" style="color:whitesmoke" ></i><a href="#!"> Facebook</a>
+                        <i class="fa fa-facebook" style="color:whitesmoke"></i><a href="#!"> Facebook</a>
                     </li>
                     <li>
-                        <i class="fa fa-instagram" style="color:whitesmoke"></i><a href="https://www.instagram.com/gabrielbateca/"> Instagram</a>
+                        <i class="fa fa-instagram" style="color:whitesmoke"></i><a
+                            href="https://www.instagram.com/gabrielbateca/"> Instagram</a>
                     </li>
                     <li>
                         <i class="fa fa-twitter" style="color:whitesmoke"></i><a href="#!"> Twitter</a>

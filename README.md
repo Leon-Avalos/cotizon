@@ -1,5 +1,0 @@
-# Cotizon
-
-## Description
-
-Edit me ✋

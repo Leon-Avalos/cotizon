@@ -8,8 +8,8 @@ const router = express.Router()
  */
 router.post('/login', (req, res) => {
     // credentials from the request
-    let username = req.param('user')
-    let password = req.param('pass')
+    let username = req.body.user
+    let password = req.body.pass
 
     // harcoded credentials, it must be queried from the database
     dummyUser = 'admin'

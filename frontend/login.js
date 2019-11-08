@@ -1,13 +1,11 @@
 function login(){
-    correo = document.getElementById('loginCorreo').value;
-    clave = document.getElementById('loginClave').value;
+    let url = 'http://localhost:3000/login'
+    let usuario = document.getElementById('loginCorreo')
+    let password = document.getElementById('loginClave')
 
-    var usuario = localStorage.getItem(correo);
-    
-    if(usuario != null){
-        if(usuario.clave == clave){
-            // Login exitoso
-            alert('Bienvenido señor ' + usuario.name);
-        }
-    }
+    axios.post(url,{user: usuario, pass: password}).then(response => {
+        console.log(response)
+    }).catch(err => {
+        console.log(err)
+    })
 }   

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='icon' href="./static/car.png" type='image/x-icon'>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Boostrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="index.css">
+    <title>Don Cotizon</title>
+</head>
+
+<body class="body">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a href="#" class="navbar-brand color-black h-50">
+            <img src="./static/car.png" alt="Cotizamelo">
+            Don Cotizon
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a href="#" class="nav-link">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a href="#" class="nav-link">Cotizar <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a href="#" class="nav-link">Sobre nosotros <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a href="#" class="nav-link" id="sign-in">Iniciar sesión<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a href="#" class="nav-link" id="sign-up">Únete</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!--CREAR EL OVERLAY Y EL POPUP PARA LA VENTANA DE SING IN-->
+    <div class="overlay" id="overlay">
+        <div class="popup" id="popup">
+            <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
+            <h3>INICIA SESIÓN</h3>
+            <h4>Ingresa tu dirección de correo electrónico y tu contraseña.</h4>
+            <form action="">
+                <div class="contenedor-inputs">
+                    <input type="email" id="loginCorreo" placeholder="ejemplo@ejemplo.com">
+                    <input type="password" id="loginClave" placeholder="Contraseña">
+                </div>
+                <input type="submit" onclick="login()" id="btnInicio" class="btn-submit" onclick="" value="ingresar">
+            </form>
+        </div>
+    </div>
+    <!--FIN DE OVERLAY Y POPUP VENTANA SIGN IN-->
+
+    <script src="login.js"></script>
+
+    <!--CREAR EL OVERLAY Y EL POPUP PARA LA VENTANA DE SING UP-->
+    <div class="overlay-sign-up" id="overlay-sign-up">
+        <div class="popup-sign-up" id="popup-sign-up">
+            <a href="#" id="btn-cerrar-popup-sign-up" class="btn-cerrar-popup-sign-up"><i class="fas fa-times"></i></a>
+            <h3>REGISTRATE</h3>
+            <h5>Los campos marcados con * son obligatorios.</h5>
+            <form action="">
+                <div class="contenedor-inputs-sign-up">
+                    <dfn>Ingrese su nombre <dfn style="color: red">*</dfn></dfn>
+                    <input type="text" id="regNombre" placeholder="Nombre"><br>
+                    <dfn>Ingrese su direccion de correo <dfn style="color: red">*</dfn></dfn>
+                    <input type="email" id="regCorreo" placeholder="ejemplo@ejemplo.com"><br>
+                    <dfn>Ingrese una contraseña <dfn style="color: red">*</dfn></dfn>
+                    <input type="password" id="regPass" placeholder="Contraseña" id="password"><br>
+                    <dfn>Ingrese nuevamente la contraseña <dfn style="color: red">*</dfn></dfn>
+                    <input type="password" id="regPass2" placeholder="Contraseña" id="confirmacion-password"><br>
+                    <br>
+                </div>
+                <input type="checkbox" id="regTerms">Acepta nuestros <a href="#">Términos de servicio</a> <br> y <a
+                    href="#">Declaración de privacidad.</a> </input><br>
+                <input type="button" onclick="registrarUsuario()" class="btn-submit-sign-up" value="Crear cuenta">
+            </form>
+        </div>
+    </div>
+
+    <!--FIN DE OVERLAY Y POPUP VENTANA SIGN UP-->
+    <script src="popup.js"></script>
+    <!--conexion con el arhivo javascript-->
+    <script src="registrar.js"></script>
+    <div class="jumbotron">
+        <h1 class="display-4 text-center">Bienvenido a Don Cotizon</h1>
+        <p class="lead text-center">Don cotizon es una plataforma web que facilita a las empresas exponer
+         la cotizacion de sus
+            servicios de una manera amigable para sus potenciales clientes. Ahorrando tiempo y automatizando procesos repetitivos.</p>
+        <hr class="my-4">
+        <p class="text-center">Te invitamos a probar nuestra demo para cotización de sitios web.</p>
+        <div class="text-center">
+            <a href="./quotation.html" class="btn btn-success btn-lg" role="button">Coticemos</a>
+        </div>
+    </div>
+
+    <!-- Boostrap Js y dependencias -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+<!-- Footer -->
+<footer class="footer bg-dark text-white font-small blue pt-4">
+
+    <!-- Footer Links -->
+    <div class="container-fluid text-center text-md-left">
+
+        <!-- Grid row -->
+        <div class="row">
+
+            <!-- Grid column -->
+            <div class="col-md-6 mt-md-0 mt-1 ">
+
+                <!-- Content -->
+                <h5 class="text-uppercase">Cotízamelo S.A</h5>
+                <form class="w-75">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <input type="text" class="form-control" id="nombreContacto" placeholder="Nombre">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <input type="email" class="form-control" id="correoContacto" placeholder="Correo">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="mensajeContacto" placeholder="Mensaje">
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" id="btnContacto" class="btn btn-primary"
+                            onclick="registrarMensaje()">Cotízanos</button>
+                    </div>
+                </form>
+
+            </div>
+            <!-- Grid column -->
+
+            <hr class="clearfix w-100 d-md-none pb-3">
+
+            <!-- Grid column -->
+            <div class="col-md-3  mb-md-0 mb-3">
+
+                <!-- Links -->
+                <h5 class="text-uppercase">Redes Sociales</h5>
+
+                <ul class="list-unstyled">
+                    <li>
+                        <i class="fa fa-facebook" style="color:whitesmoke"></i><a href="#!"> Facebook</a>
+                    </li>
+                    <li>
+                        <i class="fa fa-instagram" style="color:whitesmoke"></i><a
+                            href="https://www.instagram.com/gabrielbateca/"> Instagram</a>
+                    </li>
+                    <li>
+                        <i class="fa fa-twitter" style="color:whitesmoke"></i><a href="#!"> Twitter</a>
+                    </li>
+                    <li>
+                        <i class="fa fa-whatsapp" style="color:whitesmoke"></i><a href="https://wa.me/573143128066"> Whatsapp</a>
+                    </li>
+                </ul>
+
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-3 mb-md-0 mb-3">
+
+                <!-- Links -->
+                <h5 class="text-uppercase">Acerca de nosotros</h5>
+
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="#!">Historia</a>
+                    </li>
+                    <li>
+                        <a href="#!">PQRS</a>
+                    </li>
+                    <li>
+                        <a href="#!">Trabaja con Nosotros</a>
+                    </li>
+                </ul>
+
+            </div>
+            <!-- Grid column -->
+
+        </div>
+        <!-- Grid row -->
+
+    </div>
+    <!-- Footer Links -->
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-md-center py-3">© 2019 León Ávalos - Gabriel Bateca - Julian Peña.
+    </div>
+    <!-- Copyright -->
+
+    <script src="mensaje.js"></script>
+
+</footer>
+<!-- Footer -->
+
+</html>

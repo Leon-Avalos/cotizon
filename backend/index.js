@@ -1,5 +1,6 @@
 const express = require('express');
 const jwt = require('jsonwebtoken');
+let middleware = require('./middleware');
 
 const PORT = 3000;
 const app = express();
@@ -13,9 +14,13 @@ app.get('/', function(req, res){
 const userRouter = require('./routes/user_router');
 app.use(userRouter);
 
+app.get('/user/data', middleware.verifyToken)
+
 app.listen(PORT, ()=> {
     console.log("El api esta corriendo: http://localhost:3000");
 })
+
+
 
 
 

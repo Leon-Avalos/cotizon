@@ -16,19 +16,8 @@ app.get('/', function(req, res){
 const userRouter = require('./routes/user_router');
 app.use(userRouter);
 
-// Use of the middleware verifier on a hypothetical route
-app.get('/user/data', middleware.verifyToken)
+app.get('/user/data', middleware.verifyToken);
 
 app.listen(PORT, ()=> {
     console.log("El api esta corriendo: http://localhost:3000");
 })
-
-
-
-
-
-
-
-
-
-

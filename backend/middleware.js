@@ -23,7 +23,7 @@ let verifyToken = (req, res, next) => {
             }
         });
     } else {
-        return res.send(403).json({
+        return res.status(403).json({
             success: false,
             message: 'Token not supplied'
         });

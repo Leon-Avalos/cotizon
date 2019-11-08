@@ -39,7 +39,7 @@ class User {
         this.dB.query(query, function (err, rows, fields) {
             if (err) {                
                 return false;
-            } else {                
+            } else {  
                 return true;
             }
         })

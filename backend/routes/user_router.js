@@ -8,18 +8,18 @@ const router = express.Router()
  */
 router.post('/login', (req, res) => {
     // credentials from the request
-    username = req.username
-    password = req.password
+    let username = req.param('user')
+    let password = req.param('pass')
 
     // harcoded credentials, it must be queried from the database
     dummyUser = 'admin'
     dummyPassword = '1234'
 
-    if (username === dummyUser && password === dummyPassword) {
+    if (username == dummyUser && password == dummyPassword) {
         let token = jwt.sign({ username: username },
             config.secret,
             {
-                expiresIn: '24h' // 24 hours until the expiration
+                expiresIn: '1h' // 24 hours until the expiration
             }
         );
         res.json({
@@ -28,10 +28,11 @@ router.post('/login', (req, res) => {
             token: token
         });
     } else {
+        console.log('user ' + username + ' - pass ' + password)
         //Wrong credentials inserted
-        res.send(403).json({
+        res.status(403).json({
             success: false,
-            message: 'Wron credentials'
+            message: 'Wrong credentials'
           });
     }
 })

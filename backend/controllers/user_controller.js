@@ -5,12 +5,16 @@ const mysql = require('mysql')
  */
 class User {
     builder() {
+        /**
+         * Credentials of our database
+         */
         this.dB = new Client({
             host: 'localhost',
             user: 'dbuser',
             password: 's3kreee7',
             database: 'my_db'
         });
+
         this.conexion()
             .then(() => {
                 console.log("Conectado");
@@ -25,6 +29,11 @@ class User {
         await this.dB.connect();
     }
 
+    /**
+     * This method determinies if the username and password sent are real
+     * @param {*} username username sent by the front
+     * @param {*} password password sent by the front
+     */
     async getUser(username, password) {
         let query = "SELECT * from Users where User = '" + username + "' AND Password = '" + password + "';"
         this.dB.query(query, function (err, rows, fields) {

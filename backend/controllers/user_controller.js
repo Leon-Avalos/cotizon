@@ -10,9 +10,10 @@ class User {
          */
         this.dB = new Client({
             host: 'localhost',
-            user: 'dbuser',
-            password: 's3kreee7',
-            database: 'my_db'
+            user: 'root',
+            password: '123456789',
+            database: 'cotizaon',
+            port: 3306
         });
 
         this.conexion()
